@@ -28,11 +28,11 @@ BTC Address: 1AGxSzTPkthdNKfY5usVLwKDLk9i6sPTQj
 
 `npm start`
 
-Make sure to install geth as well for the ETH explorer to be able to function. Then run:
+## Production
 
-`geth --rpc --rpcaddr localhost --rpcport 8545 --rpcapi "web3,eth" --rpccorsdomain "http://localhost:8000"`
+Just run
 
-Then visit http://localhost:8000 in your browser of choice after you npm start the explorer
+`sudo npm run production`
 
 ## Updates since original etherpaty/explorer base:
 
