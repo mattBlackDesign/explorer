@@ -3,10 +3,10 @@
 // TODO: Put go into a config.js
 // But how to include a file from local?
 
-var GETH_HOSTNAME	= "localhost";	// put your IP address!
+var GETH_HOSTNAME	= "ropsten.infura.io";	// put your IP address!
 var APP_HOSTNAME 	= "See package.json --> scripts --> start: Change 'localhost'!!!";
 
-var GETH_RPCPORT  	= 8545; 		// for geth --rpcport GETH_RPCPORT
+var GETH_RPCPORT  	= 443; 		// for geth --rpcport GETH_RPCPORT
 var APP_PORT 		= "See package.json --> scripts --> start: Perhaps change '8000'";
 
 // this is creating the corrected geth command
@@ -93,7 +93,7 @@ angular.module('ethExplorer', ['ngRoute','ui.bootstrap','filters','ngSanitize'])
         var web3 = require('web3');
 
         // begin AltSheets changes
-        web3.setProvider(new web3.providers.HttpProvider("http://"+GETH_HOSTNAME+":"+GETH_RPCPORT));
+        web3.setProvider(new web3.providers.HttpProvider("https://"+GETH_HOSTNAME+":"+GETH_RPCPORT));
         // end AltSheets changes
 
         $rootScope.web3=web3;
